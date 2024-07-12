@@ -1,5 +1,32 @@
 @use '../../_css/common.scss' as *;
 
-.message {
-  margin-bottom: calc(var(--base) * 1.5);
+.container {
+  margin-top: 50px;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+
+  @include small-break {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+
+  @include mid-break {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  
+  @include large-break {
+    margin-top: 60px;
+    padding: 0 30px;
+  }
+
+  & > .content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include small-break {
+      max-width: 100%;
+    }
+  }
 }
